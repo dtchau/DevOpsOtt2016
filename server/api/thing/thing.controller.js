@@ -62,7 +62,7 @@ function handleError(res, statusCode) {
 // Gets a list of Things
 export function index(req, res) {
   return Thing.find().exec()
-    .then(respondWithResult(res))
+    .then(respondWithResult({myName: 'abc'}))
     .catch(handleError(res));
 }
 
